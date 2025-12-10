@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodhe Logo Concepts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;600&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --soft-rose: #E8D4D0;
+            --warm-mauve: #C9B1AB;
+            --healing-teal: #7FA9A3;
+            --deep-plum: #6B5570;
+            --warm-cream: #FAF7F4;
+            --gentle-grey: #8B8B8B;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, var(--warm-cream) 0%, #F0EBE8 100%);
+            color: #3A3A3A;
+            padding: 60px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            color: var(--deep-plum);
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--gentle-grey);
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .logo-card {
+            background: white;
+            padding: 60px 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: slideUp 0.6s ease-out backwards;
+        }
+
+        .logo-card:nth-child(1) { animation-delay: 0.1s; }
+        .logo-card:nth-child(2) { animation-delay: 0.2s; }
+        .logo-card:nth-child(3) { animation-delay: 0.3s; }
+        .logo-card:nth-child(4) { animation-delay: 0.4s; }
+        .logo-card:nth-child(5) { animation-delay: 0.5s; }
+        .logo-card:nth-child(6) { animation-delay: 0.6s; }
+
+        .logo-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+        }
+
+        .logo-title {
+            font-family: 'Cormorant', serif;
+            font-size: 1.3rem;
+            color: var(--deep-plum);
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .logo-display {
+            min-height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+
+        .logo-description {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.8;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        /* Logo 1: Gentle Embrace */
+        .logo-1 {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .embrace-icon {
+            width: 50px;
+            height: 50px;
+            position: relative;
+        }
+
+        .embrace-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .logo-1 .wordmark {
+            font-family: 'Cormorant', serif;
+            font-size: 3.2rem;
+            font-weight: 300;
+            color: var(--deep-plum);
+            letter-spacing: 2px;
+        }
+
+        /* Logo 2: Modern Sanctuary */
+        .logo-2 .wordmark {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: var(--healing-teal);
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .logo-2 .wordmark::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--healing-teal), transparent);
+        }
+
+        /* Logo 3: Healing Heart */
+        .logo-3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .heart-icon {
+            width: 55px;
+            height: 55px;
+            margin-bottom: 5px;
+        }
+
+        .logo-3 .wordmark {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--warm-mauve);
+            font-weight: 400;
+            letter-spacing: 3px;
+        }
+
+        .logo-3 .tagline-small {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gentle-grey);
+            font-weight: 400;
+        }
+
+        /* Logo 4: Butterfly Transformation */
+        .logo-4 {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .butterfly-icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        .logo-4 .wordmark {
+            font-family: 'Cormorant', serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            background: linear-gradient(135deg, var(--deep-plum), var(--healing-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 1px;
+        }
+
+        /* Logo 5: Minimal Strength */
+        .logo-5 .wordmark {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            font-weight: 500;
+            color: var(--deep-plum);
+            letter-spacing: -1px;
+            position: relative;
+        }
+
+        .logo-5 .wordmark .accent {
+            color: var(--healing-teal);
+        }
+
+        /* Logo 6: Protective Circle */
+        .logo-6 {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .circle-frame {
+            width: 160px;
+            height: 160px;
+            border: 3px solid var(--soft-rose);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .circle-frame::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            width: 30px;
+            height: 30px;
+            background: var(--healing-teal);
+            border-radius: 50%;
+        }
+
+        .logo-6 .wordmark {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--deep-plum);
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .download-section {
+            text-align: center;
+            margin-top: 80px;
+            padding: 40px;
+            background: white;
+            border-radius: 16px;
+            animation: fadeIn 1s ease-out 0.8s backwards;
+        }
+
+        .download-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--deep-plum);
+            margin-bottom: 15px;
+        }
+
+        .download-section p {
+            color: var(--gentle-grey);
+            margin-bottom: 25px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, var(--deep-plum), var(--healing-teal));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(107, 85, 112, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .logo-card {
+                padding: 40px 30px;
+            }
+
+            .logo-1 .wordmark,
+            .logo-2 .wordmark,
+            .logo-3 .wordmark,
+            .logo-4 .wordmark,
+            .logo-5 .wordmark {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bodhe Logo Concepts</h1>
+            <p class="tagline">Support that feels just right</p>
+        </header>
+
+        <div class="logo-grid">
+            <!-- Logo 1: Gentle Embrace -->
+            <div class="logo-card">
+                <h3 class="logo-title">Concept 1: Gentle Embrace</h3>
+                <div class="logo-display">
+                    <div class="logo-1">
+                        <div class="embrace-icon">
+                            <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25 45C25 45 5 35 5 20C5 10 12 5 18 5C22 5 25 8 25 8C25 8 28 5 32 5C38 5 45 10 45 20C45 35 25 45 25 45Z" 
+                                      fill="none" stroke="#C9B1AB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="25" cy="25" r="3" fill="#7FA9A3"/>
+                            </svg>
+                        </div>
+                        <span class="wordmark">Bodhe</span>
+                    </div>
+                </div>
+                <p class="logo-description">A nurturing embrace symbol paired with elegant serif typography conveys compassion and care throughout the healing journey.</p>
+            </div>
+
+            <!-- Logo 2: Modern Sanctuary -->
+            <div class="logo-card">
+                <h3 class="logo-title">Concept 2: Modern Sanctuary</h3>
+                <div class="logo-display">
+                    <div class="logo-2">
+                        <span class="wordmark">BODHE</span>
+                    </div>
+                </div>
+                <p class="logo-description">Clean, contemporary wordmark with generous spacing suggests a peaceful sanctuary. The understated elegance communicates medical credibility and trust.</p>
+            </div>
+
+            <!-- Logo 3: Healing Heart -->
+            <div class="logo-card">
+                <h3 class="logo-title">Concept 3: Healing Heart</h3>
+                <div class="logo-display">
+                    <div class="logo-3">
+                        <div class="heart-icon">
+                            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30 50L10 30C5 25 5 15 10 10C15 5 25 5 30 10C35 5 45 5 50 10C55 15 55 25 50 30L30 50Z" 
+                                      fill="#C9B1AB" opacity="0.3"/>
+                                <path d="M30 50L10 30C5 25 5 15 10 10C15 5 25 5 30 10C35 5 45 5 50 10C55 15 55 25 50 30L30 50Z" 
+                                      fill="none" stroke="#C9B1AB" stroke-width="2.5"/>
+                                <path d="M20 18C20 18 25 15 28 18" stroke="#7FA9A3" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="wordmark">Bodhe</span>
+                        <span class="tagline-small">Healing Support</span>
+                    </div>
+                </div>
+                <p class="logo-description">A gentle heart symbol above refined typography, with a subtle tagline reinforcing the brand's mission of compassionate recovery support.</p>
+            </div>
+
+            <!-- Logo 4: Butterfly Transformation -->
+            <div class="logo-card">
+                <h3 class="logo-title">Concept 4: Transformation</h3>
+                <div class="logo-display">
+                    <div class="logo-4">
+                        <div class="butterfly-icon">
+                            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30 15C30 15 20 10 15 20C10 30 15 35 20 35C25 35 30 30 30 30" 
+                                      fill="#6B5570" opacity="0.4"/>
+                                <path d="M30 15C30 15 40 10 45 20C50 30 45 35 40 35C35 35 30 30 30 30" 
+                                      fill="#7FA9A3" opacity="0.4"/>
+                                <path d="M30 30C30 30 25 35 20 40C15 45 15 50 20 52C25 54 30 50 30 45" 
+                                      fill="#6B5570" opacity="0.3"/>
+                                <path d="M30 30C30 30 35 35 40 40C45 45 45 50 40 52C35 54 30 50 30 45" 
+                                      fill="#7FA9A3" opacity="0.3"/>
+                                <circle cx="30" cy="30" r="3" fill="#6B5570"/>
+                                <path d="M30 15L30 45" stroke="#6B5570" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="wordmark">Bodhe</span>
+                    </div>
+                </div>
+                <p class="logo-description">A butterfly symbolizes transformation and new beginnings. The gradient typography bridges strength and healing, perfect for this journey.</p>
+            </div>
+
+            <!-- Logo 5: Minimal Strength -->
+            <div class="logo-card">
+                <h3 class="logo-title">Concept 5: Confident Simplicity</h3>
+                <div class="logo-display">
+                    <div class="logo-5">
+                        <span class="wordmark">B<span class="accent">o</span>dhe</span>
+                    </div>
+                </div>
+                <p class="logo-description">Bold, confident typography with a subtle color accent. The clean simplicity projects strength and professionalism while remaining approachable.</p>
+            </div>
+
+            <!-- Logo 6: Protective Circle -->
+            <div class="logo-card">
+                <h3 class="logo-title">Concept 6: Circle of Care</h3>
+                <div class="logo-display">
+                    <div class="logo-6">
+                        <div class="circle-frame">
+                            <span class="wordmark">Bodhe</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="logo-description">A protective circle frames the brand name, symbolizing support and safety. The accent dot adds a modern, hopeful touch to the design.</p>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <h2>Ready to move forward?</h2>
+            <p>These concepts can be refined and delivered in all necessary formats</p>
+            <a href="#" class="download-btn" onclick="alert('Vector files (SVG, AI, EPS) and web-ready formats (PNG, JPG) available upon request'); return false;">Request Vector Files</a>
+        </div>
+    </div>
+</body>
+</html>
